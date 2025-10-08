@@ -87,7 +87,6 @@
     const Bell = Lucide.Bell || '🔔';
     const Sun = Lucide.Sun || '☼';
     const Moon = Lucide.Moon || '☽';
-const hardcodedFirebaseConfig = {
  apiKey: "AIzaSyD0bZ08dSdabUhV42zqE7gYKegl4LyWvlY",
   authDomain: "chat-cfff9.firebaseapp.com",
   projectId: "chat-cfff9",
@@ -97,7 +96,8 @@ const hardcodedFirebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig); const ACTIVE_USER_STORAGE_KEY = 'miniTwitterActiveUser';
+const app = initializeApp(firebaseConfig);
+    const ACTIVE_USER_STORAGE_KEY = 'miniTwitterActiveUser';
     const LAST_CHECKED_NOTIFICATIONS_KEY = 'miniTwitterLastCheckedNotifications';
     const DARK_MODE_STORAGE_KEY = 'miniTwitterDarkMode';
 
@@ -121,7 +121,7 @@ const app = initializeApp(firebaseConfig); const ACTIVE_USER_STORAGE_KEY = 'mini
             getFirestore, collection, query, orderBy, onSnapshot, addDoc, serverTimestamp, doc, deleteDoc, updateDoc, getDoc, setDoc } = window.firebase || {};
 
     const getInitialActiveUser = () => localStorage.getItem(ACTIVE_USER_STORAGE_KEY);
-    const MOCK_GROUPS = [
+const MOCK_GROUPS = [
     { id: 'group1', name: '에이 팀', icon: 'A' },
     { id: 'group2', name: '비 팀', icon: 'B' },
     { id: 'group3', name: '씨 팀', icon: 'C' },
